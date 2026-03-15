@@ -14,7 +14,7 @@ export function ContactFab() {
     <div
       className={cn(
         'fixed z-50',
-        'right-4 bottom-[calc(60px+16px)]',
+        'right-4 bottom-[calc(4rem+env(safe-area-inset-bottom,0px)+1.25rem)]',
         'lg:right-6 lg:bottom-6',
         'flex flex-col items-end gap-3',
       )}
