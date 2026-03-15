@@ -43,7 +43,7 @@ export function ProfileSection() {
                     <span>
                       <TierBadge
                         tier={tierData.currentTier}
-                        size="md"
+                        size="sm"
                         onClick={() => navigate('/positions')}
                       />
                     </span>
