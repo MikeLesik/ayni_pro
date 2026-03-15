@@ -1647,6 +1647,7 @@ export const es: Record<TranslationKey, string> = {
   'learn.reward.toast': '+{{amount}} AYNI ganado!',
 
   // ── Card ──
+  'card.transactions.empty': 'Aún no hay transacciones',
   'card.page.title': 'Tarjeta Gold AYNI',
   'card.page.back': 'Configuración',
 

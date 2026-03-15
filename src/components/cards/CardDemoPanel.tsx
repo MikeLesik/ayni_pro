@@ -60,11 +60,11 @@ export function CardDemoPanel() {
   if (!showPanel) return null;
 
   function simulatePurchase() {
-    const merchant = DEMO_MERCHANTS[Math.floor(Math.random() * DEMO_MERCHANTS.length)];
+    const merchant = DEMO_MERCHANTS[Math.floor(Math.random() * DEMO_MERCHANTS.length)]!;
     const amount = Math.round((5 + Math.random() * 495) * 100) / 100;
     const result = spend(merchant.name, amount, merchant.category);
     if (result.success) {
-      setLastResult(`\u2713 €${amount.toFixed(2)} at ${merchant.name}`);
+      setLastResult(`✓ €${amount.toFixed(2)} at ${merchant.name}`);
     } else {
       setLastResult(`\u2717 Declined: ${result.error}`);
     }

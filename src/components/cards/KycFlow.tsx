@@ -1,4 +1,3 @@
-import { useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, ArrowRight, Check, Upload, Camera } from 'lucide-react';
 import { Button } from '@/components/ui/Button';

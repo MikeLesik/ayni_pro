@@ -1,17 +1,14 @@
 import { useState } from 'react';
-import { motion } from 'framer-motion';
 import { CreditCard, Package, Truck, Check, MapPin } from 'lucide-react';
 import { Card } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
 import { Modal } from '@/components/ui/Modal';
 import { useCardStore, useCardTier } from '@/stores/cardStore';
 import { getCardPrivileges } from '@/lib/cardConfig';
-import { useReducedMotion } from '@/hooks/useReducedMotion';
 import { useTranslation } from '@/i18n';
 
 export function PhysicalCardSection() {
   const { t } = useTranslation();
-  const reducedMotion = useReducedMotion();
   const tier = useCardTier();
   const privileges = getCardPrivileges(tier);
   const physicalCard = useCardStore((s) => s.physicalCard);

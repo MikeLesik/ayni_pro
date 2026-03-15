@@ -16,7 +16,6 @@ import { MinePreviewCard } from '@/components/home/MinePreviewCard';
 import { TierCard } from '@/components/ui/TierCard';
 import { CommunityStats } from '@/components/home/CommunityStats';
 import { ParticipantsBadge } from '@/components/shared/ParticipantsBadge';
-import { ActivityTicker } from '@/components/shared/ActivityTicker';
 import { DemoPositionCard } from '@/components/home/DemoPositionCard';
 import { ClaimButton } from '@/components/home/ClaimButton';
 import { useMineStore } from '@/stores/mineStore';

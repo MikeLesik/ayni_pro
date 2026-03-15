@@ -41,7 +41,7 @@ describe('LIFETIME_GRAMS_THRESHOLDS', () => {
   it('has strictly ascending threshold values', () => {
     const values = TIERS.map((t) => LIFETIME_GRAMS_THRESHOLDS[t]);
     for (let i = 1; i < values.length; i++) {
-      expect(values[i]).toBeGreaterThan(values[i - 1]);
+      expect(values[i]!).toBeGreaterThan(values[i - 1]!);
     }
   });
 });

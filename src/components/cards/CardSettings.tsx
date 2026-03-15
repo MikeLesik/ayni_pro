@@ -240,7 +240,7 @@ function SettingToggle({
       }`}
     >
       <span className="text-sm text-text-primary">{label}</span>
-      <Toggle checked={value} onCheckedChange={onChange} />
+      <Toggle checked={value} onChange={onChange} />
     </div>
   );
 }

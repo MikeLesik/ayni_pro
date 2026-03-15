@@ -1644,6 +1644,7 @@ export const en = {
   'learn.reward.toast': '+{{amount}} AYNI earned!',
 
   // ── Card ──
+  'card.transactions.empty': 'No transactions yet',
   'card.page.title': 'AYNI Gold Card',
   'card.page.back': 'Settings',
 

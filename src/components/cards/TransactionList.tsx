@@ -218,7 +218,7 @@ function groupByDate(txs: CardTransaction[]) {
     let label: string;
     if (dateStr === today) label = 'today';
     else if (dateStr === yesterday) label = 'yesterday';
-    else if (dateStr >= weekAgo) label = 'thisWeek';
+    else if (dateStr! >= weekAgo!) label = 'thisWeek';
     else label = 'earlier';
 
     if (!groups.has(label)) groups.set(label, []);

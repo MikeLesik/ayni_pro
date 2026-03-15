@@ -12,7 +12,7 @@ function generateMockResponse(email: string, firstName = 'Yuriy'): AuthResponse 
       firstName,
       lastName: null,
       avatarUrl: null,
-      tier: 'explorer',
+      tier: 'standard' as const,
       kycStatus: 'none',
       createdAt: new Date().toISOString(),
     },

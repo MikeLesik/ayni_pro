@@ -1,7 +1,6 @@
 import {
   ShoppingBag,
   ArrowDownLeft,
-  ArrowUpRight,
   RotateCcw,
 } from 'lucide-react';
 import { Card } from '@/components/ui/Card';

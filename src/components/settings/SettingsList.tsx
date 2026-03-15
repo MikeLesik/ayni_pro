@@ -45,8 +45,6 @@ export function SettingsList() {
   const setAutoReinvestTerm = useSimulationStore((s) => s.setAutoReinvestTerm);
 
   const cardDemoMode = useCardStore((s) => s.demoMode);
-  const cardLifecycle = useCardStore((s) => s.lifecycle);
-  const cardBalance = useCardStore((s) => s.cardBalance);
 
   const supported = isNotificationSupported();
   const permissionStatus = getNotificationPermission();

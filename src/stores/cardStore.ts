@@ -4,7 +4,6 @@ import { uid } from '@/lib/uid';
 import { getCardPrivileges } from '@/lib/cardConfig';
 import { useTierData } from '@/hooks/useTierData';
 import type { AyniTier } from '@/lib/cardConfig';
-import type { TierLevel } from '@/types/tier';
 
 // ── Types ────────────────────────────────────────────────────────────────
 
