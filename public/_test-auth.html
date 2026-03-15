@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html><body><script>
+localStorage.setItem('ayni-auth', JSON.stringify({
+  state: {
+    user: {id:"1",email:"test@ayni.com",firstName:"Test",lastName:"User"},
+    accessToken: "fake-token",
+    refreshToken: "fake-refresh",
+    isAuthenticated: true
+  },
+  version: 0
+}));
+localStorage.setItem('ayni-ui', JSON.stringify({
+  state: { theme: "light", advancedView: false },
+  version: 0
+}));
+window.location.href = "/learn";
+</script></body></html>

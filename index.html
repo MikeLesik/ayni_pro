@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#000000" />
+
+    <!-- iOS PWA support -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="AYNI" />
+    <link rel="apple-touch-icon" href="/icons/icon-192.png" />
+
+    <!-- SEO -->
+    <meta name="description" content="Earn gold-backed returns from real mining operations. Participate from $100, receive quarterly PAXG distributions." />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="AYNI Gold — Earn Real Gold from Mining" />
+    <meta property="og:description" content="Participate in licensed gold mining from $100. Quarterly PAXG distributions backed by real operations." />
+    <meta property="og:image" content="/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AYNI Gold — Earn Real Gold from Mining" />
+    <meta name="twitter:description" content="Participate in licensed gold mining from $100. Quarterly PAXG distributions backed by real operations." />
+    <meta name="twitter:image" content="/og-image.png" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "AYNI Gold",
+          "url": "https://ayni.gold",
+          "logo": "https://ayni.gold/icons/icon-512.png",
+          "description": "Tokenized revenue-share platform backed by licensed gold mining operations in South America."
+        },
+        {
+          "@type": "WebApplication",
+          "name": "AYNI Gold",
+          "url": "https://ayni.gold",
+          "applicationCategory": "FinanceApplication",
+          "operatingSystem": "Web",
+          "description": "Earn gold-backed returns from real mining operations. Participate from $100, receive quarterly PAXG distributions.",
+          "offers": {
+            "@type": "Offer",
+            "price": "100",
+            "priceCurrency": "USD",
+            "description": "Minimum participation amount"
+          }
+        }
+      ]
+    }
+    </script>
+
+    <title>AYNI Gold — Earn Real Gold from Mining</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js');
+        });
+      }
+    </script>
+  </body>
+</html>

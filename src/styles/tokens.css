@@ -1,0 +1,282 @@
+/* ==========================================================================
+   AYNI GOLD — Design Tokens
+   Source: AYNI_Redesign_DesignSpec_v1.md
+   ========================================================================== */
+
+/* ══════════════════════════════════════════════════════════════════════════
+   APP-LIKE MOBILE LOCK — prevent horizontal swipe / bounce / overscroll
+   ══════════════════════════════════════════════════════════════════════════ */
+
+html,
+body {
+  overflow-x: hidden;
+  overscroll-behavior-x: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+html {
+  /* Prevent pull-to-refresh and rubber-band on iOS */
+  overscroll-behavior-y: none;
+}
+
+body {
+  /* Disable text-selection drag that causes horizontal shift on iOS */
+  -webkit-user-select: none;
+  user-select: none;
+  /* Disable callout / tap-highlight */
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+  /* Prevent double-tap zoom */
+  touch-action: manipulation;
+}
+
+/* Re-enable text selection inside inputs, textareas and contenteditable */
+input,
+textarea,
+[contenteditable='true'],
+select {
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+:root {
+  color-scheme: light;
+
+  /* ── PRIMARY ───────────────────────────────────────────────────────── */
+  --color-primary: #1b3a4b;
+  --color-primary-hover: #152f3d;
+  --color-primary-light: #e8f0f4;
+
+  /* ── GOLD ACCENT ───────────────────────────────────────────────────── */
+  --color-gold: #c9a84c;
+  --color-gold-mid: #e8d48b;
+  --color-gold-light: #f5efd7;
+  --color-gold-gradient: linear-gradient(135deg, #c9a84c 0%, #e8d48b 50%, #c9a84c 100%);
+  --color-gold-dark: #8a7230;
+
+  /* ── PRIMARY GRADIENT (progress bars, sliders) ────────────────────── */
+  --color-primary-gradient: linear-gradient(135deg, #1b3a4b 0%, #2a5a6f 50%, #1b3a4b 100%);
+
+  /* ── BUTTON SHADOWS ───────────────────────────────────────────────── */
+  --shadow-primary-sm: 0 1px 3px rgba(27, 58, 75, 0.15);
+  --shadow-primary-md: 0 2px 8px rgba(27, 58, 75, 0.25);
+  --shadow-primary-cta: 0 2px 8px rgba(27, 58, 75, 0.2);
+
+  /* ── FOCUS RING ──────────────────────────────────────────────────── */
+  --color-focus-ring: rgba(27, 58, 75, 0.1);
+
+  /* ── TOOLTIP ─────────────────────────────────────────────────────── */
+  --color-tooltip-bg: #1a1a1a;
+  --color-tooltip-text: #ffffff;
+  --color-tooltip-muted: rgba(255, 255, 255, 0.7);
+
+  /* ── NEUTRAL / BACKGROUNDS ─────────────────────────────────────────── */
+  --color-bg-primary: #fafaf7;
+  --color-bg-secondary: #f4f3ef;
+  --color-surface-card: #ffffff;
+  --color-surface-elevated: rgba(255, 255, 255, 0.85);
+
+  /* ── BORDERS ───────────────────────────────────────────────────────── */
+  --color-border: #e8e6e1;
+  --color-border-light: #f0eeea;
+  --color-border-subtle: rgba(0, 0, 0, 0.04);
+
+  /* ── TEXT ───────────────────────────────────────────────────────────── */
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #6b6b6b;
+  --color-text-muted: #737373;
+  --color-text-on-primary: #ffffff;
+
+  /* ── SEMANTIC ──────────────────────────────────────────────────────── */
+  --color-success: #2d8a4e;
+  --color-success-light: #e8f5ec;
+  --color-warning: #d4920a;
+  --color-warning-light: #fff8e6;
+  --color-error: #c53030;
+  --color-error-light: #fee8e8;
+  --color-info: #2b6cb0;
+  --color-info-light: #e6f0fa;
+
+  /* ── SHADOWS (Elevation System) ────────────────────────────────────── */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 4px 12px rgba(0, 0, 0, 0.03);
+  --shadow-md: 0 2px 6px rgba(0, 0, 0, 0.06), 0 8px 24px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.08), 0 16px 48px rgba(0, 0, 0, 0.08);
+  --shadow-gold: 0 2px 12px rgba(201, 168, 76, 0.15);
+
+  /* ── BORDER RADIUS ─────────────────────────────────────────────────── */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 20px;
+  --radius-full: 9999px;
+
+  /* ── SPACING ───────────────────────────────────────────────────────── */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* ── ICON SIZES ────────────────────────────────────────────────────── */
+  --icon-sm: 16px;
+  --icon-md: 20px;
+  --icon-lg: 24px;
+  --icon-xl: 32px;
+
+  /* ── DENSITY SPACING ──────────────────────────────────────────────── */
+  --section-gap-related: 8px;
+  --section-gap-separate: 16px;
+  --card-padding-lg: 16px;
+  --card-padding-md: 12px;
+  --card-padding-sm: 8px;
+
+  /* ── LAYOUT ────────────────────────────────────────────────────────── */
+  --content-max-width: 1200px;
+  --nav-height-desktop: 64px;
+  --nav-height-mobile: 56px;
+  --tab-bar-height: 64px;
+  --content-padding-desktop: 32px;
+  --content-padding-mobile: 16px;
+
+  /* ── TRANSITIONS ───────────────────────────────────────────────────── */
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.2s ease;
+  --transition-slow: 0.3s ease-out;
+  --transition-spring: 0.4s ease-out;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   DARK MODE
+   ══════════════════════════════════════════════════════════════════════════ */
+
+[data-theme='dark'] {
+  color-scheme: dark;
+
+  --color-bg-primary: #141418;
+  --color-bg-secondary: #1c1c22;
+  --color-surface-card: #282830;
+  --color-surface-elevated: rgba(28, 28, 34, 0.9);
+
+  --color-border: #2e2e35;
+  --color-border-light: #252530;
+  --color-border-subtle: rgba(255, 255, 255, 0.06);
+
+  --color-text-primary: #f0f0f0;
+  --color-text-secondary: #a0a0a8;
+  --color-text-muted: #6b6b75;
+
+  --color-gold: #d9bc62;
+  --color-gold-mid: #f0e0a0;
+  --color-gold-light: rgba(217, 188, 98, 0.20);
+  --color-gold-gradient: linear-gradient(135deg, #d9bc62 0%, #f0e0a0 50%, #d9bc62 100%);
+  --color-gold-dark: #d4b45c;
+
+  --color-primary: #3a8cc0;
+  --color-primary-hover: #2e7aad;
+  --color-primary-light: rgba(58, 140, 192, 0.15);
+  --color-primary-gradient: linear-gradient(135deg, #3a8cc0 0%, #5aaee0 50%, #3a8cc0 100%);
+
+  --shadow-primary-sm: 0 1px 3px rgba(58, 140, 192, 0.2);
+  --shadow-primary-md: 0 2px 8px rgba(58, 140, 192, 0.3);
+  --shadow-primary-cta: 0 2px 8px rgba(58, 140, 192, 0.25);
+
+  --color-focus-ring: rgba(58, 140, 192, 0.25);
+
+  --color-tooltip-bg: #f0f0f0;
+  --color-tooltip-text: #1a1a1a;
+  --color-tooltip-muted: rgba(0, 0, 0, 0.55);
+
+  --color-success: #45b56e;
+  --color-success-light: rgba(61, 165, 100, 0.15);
+  --color-warning: #e0a30e;
+  --color-warning-light: rgba(224, 163, 14, 0.15);
+  --color-error: #e05252;
+  --color-error-light: rgba(224, 82, 82, 0.15);
+  --color-info: #4a90d9;
+  --color-info-light: rgba(74, 144, 217, 0.15);
+
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.2), 0 4px 12px rgba(0, 0, 0, 0.15);
+  --shadow-md: 0 2px 6px rgba(0, 0, 0, 0.25), 0 8px 24px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.3), 0 16px 48px rgba(0, 0, 0, 0.25);
+  --shadow-gold: 0 2px 12px rgba(217, 188, 98, 0.2);
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   SKELETON SHIMMER
+   ══════════════════════════════════════════════════════════════════════════ */
+
+.skeleton-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--color-bg-secondary) 25%,
+    var(--color-border-light) 50%,
+    var(--color-bg-secondary) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s linear infinite;
+  border-radius: var(--radius-md);
+}
+
+@keyframes shimmer {
+  from {
+    background-position: -200% 0;
+  }
+  to {
+    background-position: 200% 0;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   REDUCED MOTION
+   ══════════════════════════════════════════════════════════════════════════ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .skeleton-shimmer {
+    animation: none;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   BACKGROUND TEXTURES
+   ══════════════════════════════════════════════════════════════════════════ */
+
+.bg-noise {
+  position: relative;
+}
+
+.bg-noise::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/noise.svg');
+  background-repeat: repeat;
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 1;
+}
+
+[data-theme='dark'] .bg-noise::after {
+  opacity: 0.05;
+}
+
+.bg-dots {
+  background-image: radial-gradient(circle, var(--color-border-light) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
