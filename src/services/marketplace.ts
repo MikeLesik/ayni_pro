@@ -10,7 +10,7 @@ import { mockListings, computeMockStats, computeMockBurnTotal } from './mock/dat
 import { useSimulationStore } from '@/stores/simulation';
 import { getTierDiscount } from './mock/helpers';
 
-const useMocks = import.meta.env.VITE_USE_MOCKS === 'true';
+const useMocks = import.meta.env.VITE_USE_MOCKS !== 'false';
 
 // ── Mock helpers ────────────────────────────────────────────────
 
