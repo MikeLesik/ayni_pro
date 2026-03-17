@@ -25,7 +25,7 @@ export function PageLayout() {
           <NotificationBell count={unreadCount} />
         </Link>
       </div>
-      <main id="main-content" className="relative z-[2] mx-auto max-w-[1200px] px-4 pt-[calc(env(safe-area-inset-top,0px)+1rem)] pb-[calc(6rem+env(safe-area-inset-bottom,0.5rem))] md:px-6 md:pt-4 md:pb-6 lg:px-8 lg:pt-4 lg:pb-6">
+      <main id="main-content" className="relative z-[2] mx-auto max-w-[1200px] px-4 pt-[calc(env(safe-area-inset-top,0px)+1rem)] pb-[calc(6.5rem+env(safe-area-inset-bottom,0.75rem))] md:px-6 md:pt-4 md:pb-6 lg:px-8 lg:pt-4 lg:pb-6">
         <ErrorBoundary>
           <AnimatedOutlet />
         </ErrorBoundary>

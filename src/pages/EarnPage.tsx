@@ -43,7 +43,7 @@ export default function EarnPage() {
   }, [isOtc]);
 
   return (
-    <div className="pt-4 pb-[calc(6rem+env(safe-area-inset-bottom,0px))] md:pt-6 lg:pb-24">
+    <div className="pt-4 pb-[calc(6.5rem+env(safe-area-inset-bottom,0.75rem))] md:pt-6 lg:pb-24">
       {/* Header */}
       <div className="mb-3 text-center sm:text-left">
         <h1 className="font-display text-heading-1 text-text-primary">{t('earn.page.title')}</h1>

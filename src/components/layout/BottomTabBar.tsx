@@ -18,14 +18,17 @@ export function BottomTabBar() {
   return (
     <nav
       className={cn(
-        'fixed bottom-0 left-0 right-0 z-[100] lg:hidden',
-        'flex justify-around items-start',
-        'pt-1 pb-[calc(0.25rem+env(safe-area-inset-bottom,0.25rem))]',
+        'fixed z-[100] lg:hidden',
+        'bottom-[calc(0.75rem+env(safe-area-inset-bottom,0px))]',
+        'left-4 right-4',
+        'flex justify-around items-center',
+        'h-14 px-2',
         'bg-surface-elevated',
-        'border-t border-border-light',
-        'shadow-[0_-1px_3px_rgba(0,0,0,0.03)]',
+        'border border-white/15',
+        'rounded-2xl',
+        'shadow-lg shadow-black/10',
       )}
-      style={{ backdropFilter: 'blur(20px) saturate(1.2)' }}
+      style={{ backdropFilter: 'blur(24px) saturate(1.3)' }}
     >
       {tabs.map((tab) => {
         // Resources tab is also active on /trust paths
@@ -42,7 +45,7 @@ export function BottomTabBar() {
             to={tab.to}
             className={({ isActive }) =>
               cn(
-                'relative flex flex-col items-center gap-0.5 min-w-[48px] py-2',
+                'relative flex flex-col items-center justify-center gap-0.5 min-w-[48px] py-1.5',
                 'transition-colors duration-150',
                 isActive || isResourcesMatch || isParticipateMatch || (isProfileMatch && !isActive)
                   ? 'text-text-primary'
@@ -56,7 +59,7 @@ export function BottomTabBar() {
                   isResourcesMatch ||
                   isParticipateMatch ||
                   (isProfileMatch && !isActive)) && (
-                  <span className="absolute top-0 left-1/2 -translate-x-1/2 w-5 h-0.5 rounded-full bg-gold" />
+                  <span className="absolute -bottom-0.5 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-gold" />
                 )}
                 <tab.icon size={20} strokeWidth={1.5} />
                 <span className="text-xs leading-tight">{tab.label}</span>
