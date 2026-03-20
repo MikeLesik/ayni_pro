@@ -64,34 +64,34 @@ const config: Config = {
 
       /* ── TYPOGRAPHY ──────────────────────────────────────────── */
       fontFamily: {
-        display: ['"DM Serif Display"', "Georgia", "serif"],
+        display: ['"Plus Jakarta Sans"', "system-ui", "sans-serif"],
         sans: ["Inter", "system-ui", "-apple-system", "sans-serif"],
         mono: ['"JetBrains Mono"', "Consolas", "monospace"],
       },
       fontSize: {
         "display-hero": [
-          "56px",
-          { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "400" },
+          "48px",
+          { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700" },
         ],
         "display-hero-mobile": [
-          "40px",
-          { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "400" },
+          "36px",
+          { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700" },
         ],
         "display-lg": [
           "36px",
-          { lineHeight: "1.15", letterSpacing: "-0.01em", fontWeight: "400" },
+          { lineHeight: "1.15", letterSpacing: "-0.01em", fontWeight: "700" },
         ],
         "display-lg-mobile": [
           "28px",
-          { lineHeight: "1.15", letterSpacing: "-0.01em", fontWeight: "400" },
+          { lineHeight: "1.15", letterSpacing: "-0.01em", fontWeight: "700" },
         ],
         "heading-1": [
           "28px",
-          { lineHeight: "1.25", letterSpacing: "-0.01em", fontWeight: "400" },
+          { lineHeight: "1.25", letterSpacing: "-0.01em", fontWeight: "600" },
         ],
         "heading-1-mobile": [
           "24px",
-          { lineHeight: "1.25", letterSpacing: "-0.01em", fontWeight: "400" },
+          { lineHeight: "1.25", letterSpacing: "-0.01em", fontWeight: "600" },
         ],
         "heading-2": [
           "22px",

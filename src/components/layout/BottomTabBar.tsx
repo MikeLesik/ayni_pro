@@ -1,5 +1,5 @@
 import { NavLink, useLocation } from 'react-router-dom';
-import { Home, TrendingUp, Layers, BookOpen, User } from 'lucide-react';
+import { Home, TrendingUp, Layers, BookOpen } from 'lucide-react';
 import { cn } from '@/lib/cn';
 import { useTranslation } from '@/i18n';
 
@@ -12,7 +12,6 @@ export function BottomTabBar() {
     { to: '/participate', label: t('nav.participate'), icon: TrendingUp },
     { to: '/positions', label: t('nav.portfolio'), icon: Layers },
     { to: '/learn', label: t('nav.resources'), icon: BookOpen },
-    { to: '/settings', label: t('nav.profile'), icon: User },
   ];
 
   return (
@@ -22,22 +21,18 @@ export function BottomTabBar() {
         'bottom-[calc(0.75rem+env(safe-area-inset-bottom,0px))]',
         'left-4 right-4',
         'flex justify-around items-center',
-        'h-14 px-2',
+        'h-12 px-3',
         'bg-surface-elevated',
-        'border border-white/15',
+        'border border-white/12',
         'rounded-2xl',
-        'shadow-lg shadow-black/10',
+        'shadow-lg shadow-black/8',
       )}
-      style={{ backdropFilter: 'blur(24px) saturate(1.3)' }}
+      style={{ backdropFilter: 'blur(20px) saturate(1.3)' }}
     >
       {tabs.map((tab) => {
-        // Resources tab is also active on /trust paths
         const isResourcesMatch = tab.to === '/learn' && location.pathname.startsWith('/trust');
-        // Participate tab is also active on /participate/marketplace paths
         const isParticipateMatch =
           tab.to === '/participate' && location.pathname.startsWith('/participate/');
-        // Profile tab is also active on /settings/* paths
-        const isProfileMatch = tab.to === '/settings' && location.pathname.startsWith('/settings');
 
         return (
           <NavLink
@@ -45,9 +40,9 @@ export function BottomTabBar() {
             to={tab.to}
             className={({ isActive }) =>
               cn(
-                'relative flex flex-col items-center justify-center gap-0.5 min-w-[48px] py-1.5',
+                'relative flex flex-col items-center justify-center gap-0.5 min-w-[48px] min-h-[48px] py-1',
                 'transition-colors duration-150',
-                isActive || isResourcesMatch || isParticipateMatch || (isProfileMatch && !isActive)
+                isActive || isResourcesMatch || isParticipateMatch
                   ? 'text-text-primary'
                   : 'text-text-muted hover:text-text-primary',
               )
@@ -55,14 +50,11 @@ export function BottomTabBar() {
           >
             {({ isActive }) => (
               <>
-                {(isActive ||
-                  isResourcesMatch ||
-                  isParticipateMatch ||
-                  (isProfileMatch && !isActive)) && (
-                  <span className="absolute -bottom-0.5 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-gold" />
+                {(isActive || isResourcesMatch || isParticipateMatch) && (
+                  <span className="absolute -bottom-0.5 left-1/2 -translate-x-1/2 w-5 h-[3px] rounded-full bg-gold" />
                 )}
                 <tab.icon size={20} strokeWidth={1.5} />
-                <span className="text-xs leading-tight">{tab.label}</span>
+                <span className="text-[10px] leading-tight font-medium">{tab.label}</span>
               </>
             )}
           </NavLink>

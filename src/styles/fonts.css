@@ -4,54 +4,5 @@
    TODO: Replace @import with self-hosted woff2 files in src/assets/fonts/
    ========================================================================== */
 
-/* Fallback: Google Fonts CDN (temporary, replace with self-hosted) */
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&family=JetBrains+Mono&display=swap');
-
-/* ── DM Serif Display ────────────────────────────────────────────────────
-   Usage: Hero numbers, H1 headings ONLY
-   ─────────────────────────────────────────────────────────────────────── */
-/* @font-face {
-  font-family: 'DM Serif Display';
-  src: url('/src/assets/fonts/DMSerifDisplay-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-} */
-
-/* ── Inter ────────────────────────────────────────────────────────────────
-   Usage: All UI text, body copy, labels, buttons
-   ─────────────────────────────────────────────────────────────────────── */
-/* @font-face {
-  font-family: 'Inter';
-  src: url('/src/assets/fonts/Inter-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Inter';
-  src: url('/src/assets/fonts/Inter-Medium.woff2') format('woff2');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Inter';
-  src: url('/src/assets/fonts/Inter-SemiBold.woff2') format('woff2');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-} */
-
-/* ── JetBrains Mono ──────────────────────────────────────────────────────
-   Usage: Wallet addresses, transaction hashes, code
-   ─────────────────────────────────────────────────────────────────────── */
-/* @font-face {
-  font-family: 'JetBrains Mono';
-  src: url('/src/assets/fonts/JetBrainsMono-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-} */
+/* Google Fonts CDN — Plus Jakarta Sans (display) + Inter (body) + JetBrains Mono */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono&display=swap');

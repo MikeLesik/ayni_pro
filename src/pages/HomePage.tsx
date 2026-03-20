@@ -25,7 +25,7 @@ import { useEffect } from 'react';
 
 function HomeSkeletons() {
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex flex-col gap-6">
       {/* Greeting skeleton */}
       <div>
         <SkeletonLoader variant="heading" width="200px" />
@@ -107,19 +107,10 @@ export default function HomePage() {
   }
 
   return (
-    <AnimatedPage stagger className="flex flex-col">
-      {/* Greeting */}
-      <StaggerItem className="mb-2">
-        <GreetingSection className="!mb-0" />
-      </StaggerItem>
-
-      {/* Demo position card (onboarding) */}
-      <StaggerItem className="mb-3">
-        <DemoPositionCard />
-      </StaggerItem>
-
-      {/* Block 1: Hero — total accrued + today + progress ring */}
-      <StaggerItem className="mb-3">
+    <AnimatedPage stagger className="flex flex-col gap-6">
+      {/* Section 1: Greeting + Hero Earnings */}
+      <StaggerItem>
+        <GreetingSection className="!mb-3" />
         <HeroEarningsCard
           distributions={data.distributions}
           nextPayout={data.nextPayout}
@@ -128,37 +119,8 @@ export default function HomePage() {
         />
       </StaggerItem>
 
-      {/* Contributor Status */}
-      <StaggerItem className="mb-3">
-        <TierCard variant="compact" />
-      </StaggerItem>
-
-      {/* Community Overview */}
-      <StaggerItem className="mb-3">
-        <h3 className="text-sm font-semibold text-text-primary mb-2">
-          {t('home.community.title')}
-        </h3>
-        <CommunityStats />
-      </StaggerItem>
-
-      {/* Claim daily reward */}
-      {showGamification && mineStats && (
-        <StaggerItem className="mb-3">
-          <ClaimButton
-            dailyGoldGrams={mineStats.dailyProduction.goldGrams}
-            dailyUsdValue={mineStats.dailyProduction.usdValue}
-          />
-        </StaggerItem>
-      )}
-
-      {/* Social proof badge */}
-      <StaggerItem className="mb-3">
-        <ParticipantsBadge className="justify-center" />
-      </StaggerItem>
-
-
-      {/* Block 2: Quick Stats Row — 3 compact cards */}
-      <StaggerItem className="mb-3">
+      {/* Section 2: Quick Stats — 2x2 grid */}
+      <StaggerItem>
         <QuickStatsRow
           positions={data.positions}
           distributions={data.distributions}
@@ -167,15 +129,8 @@ export default function HomePage() {
         />
       </StaggerItem>
 
-      {/* Mine preview — link to My Mine */}
-      {showGamification && (
-        <StaggerItem className="mb-3">
-          <MinePreviewCard />
-        </StaggerItem>
-      )}
-
-      {/* Block 3: Chart / Journal — tabbed */}
-      <StaggerItem className="mb-3">
+      {/* Section 3: Chart / Journal */}
+      <StaggerItem>
         <ChartJournalBlock
           chartData={data.chartData}
           dailyRewards={data.dailyRewards}
@@ -185,7 +140,12 @@ export default function HomePage() {
         />
       </StaggerItem>
 
-      {/* Block 4: Personalized CTA */}
+      {/* Section 4: Tier Progression */}
+      <StaggerItem>
+        <TierCard variant="compact" />
+      </StaggerItem>
+
+      {/* Section 5: CTA */}
       <StaggerItem>
         <CtaBanner
           positionCount={data.positions.activeCount}
@@ -193,8 +153,6 @@ export default function HomePage() {
           totalParticipated={data.positions.totalParticipated}
         />
       </StaggerItem>
-
-      <OnboardingCarousel />
     </AnimatedPage>
   );
 }
